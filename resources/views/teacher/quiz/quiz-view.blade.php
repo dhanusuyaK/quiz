@@ -58,7 +58,6 @@
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                         <th scope="col">Settings</th>
-
                     </tr>
                 </thead>
                 <tbody>

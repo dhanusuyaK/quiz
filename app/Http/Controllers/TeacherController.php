@@ -34,21 +34,21 @@ class TeacherController extends Controller
 
     public function questionBankAdd()
     {
-        return view("teacher.quiz.quiz-add");
+        return view("teacher.quiz.questionbank-add");
     }
 
     public function questionBanView()
     {
-        return view("teacher.quiz.quiz-view");
+        return view("teacher.quiz.questionbank-view");
     }
 
     public function questionBanQuestionAdd()
     {
-        return view("teacher.quiz.quiz-question-add");
+        return view("teacher.quiz.questionbank-question-add");
     }
 
     public function questionBanQuestionView()
     {
-        return view("teacher.quiz.quiz-question-view");
+        return view("teacher.quiz.questionbank-question-view");
     }
 }
