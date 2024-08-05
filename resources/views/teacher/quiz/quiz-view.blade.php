@@ -47,6 +47,7 @@
             <div class="d-grid gap-2 col-6 mx-auto pt-4">
                 <a class="btn btn-primary w-100" href="{{route('teacher.quiz.add')}}" role="button">Add New Quiz</a>
             </div>
+            <hr>
             <table class="table table-bordered table-striped table-responsive">
                 <thead class="table-dark">
                     <tr>
@@ -61,37 +62,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($visitcounters_data as $visitcounter)
-                    <tr class="">
-                        @php
-                        $db_name = $visitcounter->db_name;
-                        @endphp
-                        <td scope="row">{{ $loop->iteration }}</td>
-                        <td>{{ getMatchingDatabaseRealName($visitcounter->db_name) }}</td>
-                        <td>{!! $visitcounter->question !!}</td>
-
-
-                        <td><a class="btn btn-success btn-sm" target="_blank"
-                                href="{{ route('admin.mcq.read', ['db_name' => getMatchingDataBaseRealName($db_name), 'sub4' => "
-                                $visitcounter->sub4", 'id' => "$visitcounter->question_id"]) }}"
-                                role="button">View</a></td>
-                        <td><a class="btn btn-warning btn-sm" target="_blank"
-                                href="{{ route('admin.mcq.read', ['db_name' => getMatchingDataBaseRealName($db_name), 'sub4' => "
-                                $visitcounter->sub4", 'id' => "$visitcounter->question_id"]) }}"
-                                role="button">Edit</a></td>
-                        <td><a class="btn btn-danger btn-sm" target="_blank"
-                                href="{{ route('admin.mcq.read', ['db_name' => getMatchingDataBaseRealName($db_name), 'sub4' => "
-                                $visitcounter->sub4", 'id' => "$visitcounter->question_id"]) }}"
-                                role="button">Delete</a></td>
-                        <td><a class="btn btn-info btn-sm" target="_blank"
-                                href="{{ route('admin.mcq.read', ['db_name' => getMatchingDataBaseRealName($db_name), 'sub4' => "
-                                $visitcounter->sub4", 'id' => "$visitcounter->question_id"]) }}"
-                                role="button">Settings</a></td>
-
-
-
-                    </tr>
-                    @endforeach
                 </tbody>
             </table>
         </div>
