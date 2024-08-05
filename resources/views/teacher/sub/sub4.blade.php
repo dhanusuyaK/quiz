@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Quiz - Add Test</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -14,6 +14,7 @@
 
 <body>
     <header>
+        <!-- place navbar here -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <strong><a class="navbar-brand" style="color: #fff700;" href="">www.CFA.com</a></strong>
@@ -25,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                            <a class="nav-link active" aria-current="page" href="">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Reports</a>
@@ -56,60 +57,24 @@
             </div>
         </nav>
 
+
     </header>
     <main>
-        <div class="container mt-5">
-            <div class="row p-3 ps-5">
-                <p class="text-center fs-2 fw-bolder">Add New Quiz</p>
-            </div>
-            <div class="row g-3">
-                <div class="col-12 col-md-6 mb-3">
-                    <label for="subject1" class="form-label">Select Sub 1</label>
-                    <select class="form-select" id="subject1" name="subject1" aria-label="Subject 1" required>
-                        <option selected disabled>Choose Sub 1</option>
-                        @foreach($sub1 as $subject1)
-                        <option value="{{ $subject1->sub1 }}">{{ $subject1->sub1n }}</option>
-                        @endforeach
-                    </select>
-                </div>
 
-                <div class="col-12 col-md-6 mb-3">
-                    <label for="subject2" class="form-label">Select Sub 2</label>
-                    <select class="form-select" id="subject2" name="subject2" aria-label="Subject 2" required>
-                        <option selected disabled>Choose Sub 2</option>
-                        @foreach($sub2 as $subject2)
-                        <option value="{{ $subject2->sub2 }}">{{ $subject2->sub2n }}</option>
-                        @endforeach
-                    </select>
-                </div>
+        <div class="container mt-3">
+            <ul class="list-group">
 
-                <div class="col-12 col-md-6 mb-3">
-                    <label for="subject3" class="form-label">Select Sub 3</label>
-                    <select class="form-select" id="subject3" name="subject3" aria-label="Subject 3" required>
-                        <option selected disabled>Choose Sub 3</option>
-                        @foreach($sub3 as $subject3)
-                        <option value="{{ $subject3->sub3 }}">{{ $subject3->sub3n }}</option>
-                        @endforeach
-                    </select>
-                </div>
+                @foreach ($sub4 as $subject4)
+                    <li class="list-group-item list-group-item-action list-group-item-warning mt-3"><a
+                            class="text-decoration-none" style="color:black"
+                            href="{{ route('student.sub5', ['sub1' => $sub1,'sub2' => $sub2,'sub3' => $sub3,'sub4' =>$subject4->sub4])}}">
+                            <h5 class="text-center">{{ $subject4->sub4n }}</h5>
+                        </a></li>
+                @endforeach
 
-                <div class="col-12 col-md-6 mb-3">
-                    <label for="subject4" class="form-label">Select Sub 4</label>
-                    <select class="form-select" id="subject4" name="subject4" aria-label="Subject 4" required>
-                        <option selected disabled>Choose Sub 4</option>
-                        @foreach($sub4 as $subject4)
-                        <option value="{{ $subject4->sub4 }}">{{ $subject4->sub4n }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 col-md-6 mx-auto pt-4">
-                    <a href="{{ route('teacher.quiz.question.add') }}" class="btn btn-success w-100 text-decoration-none text-white">Create Quiz</a>
-                </div>
-            </div>
+            </ul>
         </div>
+
     </main>
     <footer>
         <!-- place footer here -->
@@ -120,8 +85,8 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

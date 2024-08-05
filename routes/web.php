@@ -27,8 +27,11 @@ Route::get('/teacher/questionbank/add', [TeacherController::class, 'questionBank
 Route::get('/teacher/questionbank/view', [TeacherController::class, 'questionbankView'])->name('teacher.questionbank.view');
 Route::get('/teacher/questionbank/question/add', [TeacherController::class, 'questionbankQuestionAdd'])->name('teacher.questionbank.question.add');
 Route::get('/teacher/questionbank/question/view', [TeacherController::class, 'questionbankQuestionView'])->name('teacher.questionbank.question.view');
+Route::get('/teacher/questionbank/view/{sub1}', [TeacherController::class, 'sub2'])->name('teacher.sub.sub2');
 
 
+
+// Student Routes
 Route::get('/student/questions/{sub4}/{questions_in_each_set}/{set}', [StudentController::class, 'questions'])->name('student.questions');
 Route::get('/student', [StudentController::class, 'home'])->name('student.home');
 Route::get('/student/sub1', [StudentController::class, 'sub1'])->name('student.sub1');

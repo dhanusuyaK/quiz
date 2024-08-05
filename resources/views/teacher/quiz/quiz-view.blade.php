@@ -45,7 +45,7 @@
                 <p class="text-center fs-2 fw-bolder">View Quizzes</p>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto pt-4">
-                <a class="btn btn-primary w-100" href="{{route('teacher.quiz.add')}}" role="button">Add New Quiz</a>
+                <a class="btn btn-primary w-100" href="{{ route('teacher.quiz.add') }}" role="button">Add New Quiz</a>
             </div>
             <hr>
             <table class="table table-bordered table-striped table-responsive">
@@ -65,7 +65,6 @@
             </table>
         </div>
     </main>
-
 
     <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -123,8 +122,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -145,12 +142,12 @@
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
