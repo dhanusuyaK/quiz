@@ -16,7 +16,7 @@ class StudentController extends Controller
 
     public function sub1()
     {
-        $sub1 = DB::table('a0_table_master')
+        $sub1 = DB::table('a0_question_bank_master')
             ->select('sub1', 'sub1n', 'sub1b')
             ->groupBy('sub1', 'sub1n', 'sub1b')
             ->get();
@@ -25,7 +25,7 @@ class StudentController extends Controller
 
     public function sub2($sub1)
     {
-        $sub2 = DB::table('a0_table_master')
+        $sub2 = DB::table('a0_question_bank_master')
             ->select('sub2', 'sub2n', 'sub2b')
             ->groupBy('sub2', 'sub2n', 'sub2b')
             ->where('sub1', $sub1)
@@ -36,7 +36,7 @@ class StudentController extends Controller
 
     public function sub3($sub1, $sub2)
     {
-        $sub3 = DB::table('a0_table_master')
+        $sub3 = DB::table('a0_question_bank_master')
             ->select('sub3', 'sub3n', 'sub3b')
             ->groupBy('sub3', 'sub3n', 'sub3b')
             ->where('sub1', $sub1)
@@ -48,7 +48,7 @@ class StudentController extends Controller
 
     public function sub4($sub1, $sub2, $sub3)
     {
-        $sub4 = DB::table('a0_table_master')
+        $sub4 = DB::table('a0_question_bank_master')
             ->select('sub4', 'sub4n', 'sub4b')
             ->groupBy('sub4', 'sub4n', 'sub4b')
             ->where('sub1', $sub1)
